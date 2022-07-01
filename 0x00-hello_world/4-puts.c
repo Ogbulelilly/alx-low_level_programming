@@ -1,6 +1,4 @@
 #include <stdio.h>
-gcc -save-temps 4-puts.c -o 4-puts
-#include <studio.h>
 /**
  * main - Entry point
  * Return: Always 0 (sucess)
