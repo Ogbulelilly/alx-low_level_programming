@@ -1,4 +1,4 @@
-#include <studio.h>
+#include <stdio.h>
 gcc -save-temps 4-puts.c -o 4-puts
 #include <studio.h>
 /**
@@ -8,5 +8,5 @@ gcc -save-temps 4-puts.c -o 4-puts
 int main(void)
 {
 puts ("\"programming is like building a multilingual puzzle");
-return (0) ;
+return (0);
 }
