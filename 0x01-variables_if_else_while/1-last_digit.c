@@ -7,10 +7,9 @@
  */
 int main(void)
 {
-	int n;
+        int n;
 	int L;
         char str[] = "Last digit of";
-
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	L = n % 10;
