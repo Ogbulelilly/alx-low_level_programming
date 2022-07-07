@@ -8,13 +8,13 @@
  *       used in the 0x02-functions_nested_loops directory
  */
 
-int_putchar(char c);
+int _putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
-int_islower(int c);
-int_isalpha(int c);
-int_ print_sign(int n);
-int_abs(int);
+int _islower(int c);
+int _isalpha(int c);
+int _ print_sign(int n);
+int _abs(int);
 int print_last_digit(int);
 void jack_bauer(void);
 int times_table(void);
