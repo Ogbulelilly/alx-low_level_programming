@@ -1,1 +1,1 @@
-The prime factors 
+finds and prints the largest prime factor
