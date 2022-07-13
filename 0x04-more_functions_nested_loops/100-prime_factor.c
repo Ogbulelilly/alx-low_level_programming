@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -35,5 +34,4 @@
  * printf("%ld\n", prime);
  *
  * return (0);
- wq
  * }
