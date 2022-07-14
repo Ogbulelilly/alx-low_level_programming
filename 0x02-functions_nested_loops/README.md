@@ -1,1 +1,1 @@
-isalpha
+Learn your times table
