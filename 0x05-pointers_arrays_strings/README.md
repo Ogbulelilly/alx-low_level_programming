@@ -1,1 +1,1 @@
-prints n elements of an array of integers, followed by a new line.
+copies the string pointed to by src, including the terminating null byte
