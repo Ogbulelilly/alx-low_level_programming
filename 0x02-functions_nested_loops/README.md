@@ -1,1 +1,1 @@
- function that prints the n times table
+Nature made the natural numbers; All else is the work of women
