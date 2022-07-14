@@ -1,1 +1,1 @@
-swaps the values of two integers.
+ returns the length of a string.
