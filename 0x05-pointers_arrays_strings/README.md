@@ -1,1 +1,1 @@
-generates random valid passwords for the program 101-crackme.
+generates random valid passwords for the program
