@@ -1,1 +1,1 @@
-strcat
+nagic
