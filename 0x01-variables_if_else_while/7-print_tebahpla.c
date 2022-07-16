@@ -1,17 +1,24 @@
 #include <stdio.h>
+
 /**
- * main - Prints the lowercase alphabet in reverse
- *
- * Return: Always 0
+ *main -> assign a random number to the variable n each time it is executed
+ *and print the last digit of the number stored in the variable n
+ *Return: Always 0 (Success)
  */
 int main(void)
 {
-	char l;
+	char ch;
 
-	for (l = 'z'; l >= 'a'; l--)
-		putchar(l);
-	
-	putchar('\n');
+	for (ch = 'z'; ch >= 'a'; ch--)
+	{
+
+		putchar(ch);
+	}
+
+	putchar(10); /* this is an ascii code for new line*/
 
 	return (0);
 }
+
+
+
