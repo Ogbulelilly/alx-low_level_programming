@@ -2,29 +2,32 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point
- * @argc: Arguments
- * @argv: Array pointing to arguments
- * Return: 0
+ * main - this is a function to print its name
+ * @argc: argc param
+ * @argv: an array of a command listed
+ * Return: 0 for success
  */
 int main(int argc, char *argv[])
 {
-	int a, sum = 0;
+	int result = 0, num, i, j, k;
 
-	if (argc < 1)
-		return (0);
-
-	for (a = 1; a < argc; a++)
+	for (i = 1; i < argc; i++)
 	{
-		if (!atoi(argv[a]))
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("%s\n", "Error");
-			return (1);
+			if (argv[i][j] > '9' || argv[i][j] < '0')
+			{
+				printf("%s\n", "Error");
+				return (1);
+			}
 		}
-		sum += atoi(argv[a]);
 	}
-	printf("%d\n", sum);
 
+	for (k = 1; k < argc; k++)
+	{
+		num = atoi(argv[k]);
+		result += num;
+	}
+	printf("%d\n", result);
 	return (0);
 }
-
