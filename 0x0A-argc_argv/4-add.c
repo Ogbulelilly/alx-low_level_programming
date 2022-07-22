@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-
 /**
  * main - Entry point
  * @argc: Arguments
@@ -24,6 +23,7 @@ int main(int argc, char *argv[])
 		}
 		sum += atoi(argv[a]);
 	}
+
 	printf("%d\n", sum);
 
 	return (0);
