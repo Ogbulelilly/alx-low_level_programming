@@ -1,42 +1,48 @@
 #include "main.h"
 #include <stlib.h>
  /**
-  * alloc_grid - returns a pointer to a 2 dimensional array of integers.
-  * @width: width of the array.
-  * @height: height of the array.
+  * alloc_grid - Returns a pointer to a 2-dimensional array of
+  * integers with each element initalized to 0
+  * @width: The width of the 2-dimensional array
+  * @height: The height of the 2-dimensional array
   *
-  * Return: pointer of an array of integers
+  * Return: If width <= 0, height <= 0, or the function fails - NULL.
+  * Otherwise - a pointer to the 2-dimensional array of integers.
   */
 int **alloc_grid(int width, int height)
 {
-	int **gridout;
-	int i, j;
+	int **chi;
+	int hgt_ind, wid_ind;
 
-	if (width < 1 || height < 1)
+	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	gridout = malloc(height * sizeof(int *));
-	if (gridout == NULL)
-	{
-		free(gridout);
-		return (NULL);
-	}
+	chi = malloc(sizeof(int *) * height);
 
-	for (i = 0; i < height; i++)
+	if (chi == NULL)
+		return (NULL);
+
+	for (hgt_ind = 0; hgt_ind < height; hgt_ind++)
 	{
-		gridout[i] = malloc(width * sizeof(int));
-		if (gridout[i] == NULL)
+		chi[hgt_ind] = malloc(sizeof(int) * width);
+
+		if (chi[hgt_ind] == NULL)
 		{
-			for (i--; i >= 0; i--)
-				free(gridout[i]);
-			free(gridout);
+			for (; hgt_ind >= 0; hgt_ind--)
+				free(chi[hgt_ind]);
+
+			free(chi);
 			return (NULL);
 		}
 	}
 
-	for (i = 0; i < height; i++)
-		for (j = 0; j < width; j++)
-			gridout[i][j] = 0;
+	for (hgt_ind = 0; hgt_ind < height; hgt_ind++)
+	{
+		for (wid_ind = 0; wid_ind < width; wid_ind++)
+			chi[hgt_ind][wid_ind] = 0;
+	}
 
-	return (gridout);
+	return (chi);
 }
+
+
