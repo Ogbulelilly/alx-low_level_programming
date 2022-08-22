@@ -1,34 +1,14 @@
 #include "main.h"
 
 /**
- * print_binary - Entry Point
- * @n: dec input
- * Return: 0
+ * print_binary - prints the binary representation of a number
+ * @n: the number to be printed
  */
+
 void print_binary(unsigned long int n)
 {
-	int i = 0, count, a, tmp;
+	if (n > 1)
+		print_binary(n >> 1);
 
-	if (n == 0)
-	{
-		printf("0");
-                return;
-	}
-
-	tmp = n;
-
-	while (tmp != 0)
-	{
-		i++;
-		tmp = tmp >> 1;
-	}
-
-	for (count = i - 1; count >= 0; count--)
-	{
-		a = n >> count;
-		if (a & 1)
-			printf("1");
-		else
-			printf("0");
-	}
+	_putchar((n & 1) + '0');
 }
